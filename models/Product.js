@@ -17,28 +17,28 @@ Product.init(
       },
       product_name: {
         type: DataTypes.STRING,
-        allowNull: false, // Cannot be null
+        allowNull: false,
       },
       price: {
         type: DataTypes.DECIMAL(10, 2),
-        allowNull: false, // Cannot be null
+        allowNull: false,
         validate: {
-          isDecimal: true, // Ensure it is a decimal value
+          isDecimal: true,
         },
       },
       stock: {
         type: DataTypes.INTEGER,
-        allowNull: false, // Cannot be null
-        defaultValue: 0, // Default value for stock
+        allowNull: false,
+        defaultValue: 0,
         validate: {
-          isNumeric: true, // Ensure it is a numeric value
+          isNumeric: true,
         },
       },
       category_id: {
         type: DataTypes.INTEGER,
         references: {
-          model: 'category', // Reference the Category model
-          key: 'id', // Reference the id column in the Category model
+          model: 'category',
+          key: 'id',
         },
       },
     },
